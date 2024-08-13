@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="exploration feature edit">
-      <change afterPath="$PROJECT_DIR$/MyFeature/AccountManagement.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFeature/CommunicationandNotification.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFeature/OrderManagement.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyFeature/ProductManagement.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/AccountManagementSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/CommunicationAndNotificationSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/OrderManagementSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/ProductManagementSteps.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AccountManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Message.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/MessagingSystem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/OrderManagement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ProductManagement.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +105,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723534697091</updated>
-      <workItem from="1723534699361" duration="11625000" />
+      <workItem from="1723534699361" duration="15862000" />
     </task>
     <task id="LOCAL-00001" summary="feature for user done with tests">
       <option name="closed" value="true" />
@@ -154,11 +155,30 @@
       <option name="project" value="LOCAL" />
       <updated>1723541841758</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="exploration feature edit">
+      <option name="closed" value="true" />
+      <created>1723549761439</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723549761440</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature for user done with tests" />
