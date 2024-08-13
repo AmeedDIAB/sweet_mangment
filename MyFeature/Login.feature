@@ -1,4 +1,4 @@
-Feature:Login
+Feature: Login
 
   Scenario Outline: Valid credentials
     Given The user is not logged in
@@ -33,11 +33,11 @@ Feature:Login
       | mohdsoftware@gmail.com      |          |
       | ameedsoftware@gmail.com     | aaaa     |
 
-
   Scenario Outline: Invalid credentials
     Given The user is not logged in
     When The credentials is invalid, email is "<Email>" and password is "<Password>"
     Then User failed in log in
+
     Examples:
       | Email                       | Password |
       | invalidameed@gmail.com      | b1b1     |
