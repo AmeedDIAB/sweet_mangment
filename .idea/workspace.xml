@@ -5,15 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="exploration feature edit">
-      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/AcceptanceTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/ContentManagementSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/MonitoringAndReportingSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/UserManagementSteps.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyFeature/AccountManagement.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyFeature/CommunicationandNotification.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyFeature/OrderManagement.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MyFeature/ProductManagement.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/AccountManagementSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/CommunicationAndNotificationSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/OrderManagementSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/ProductManagementSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,6 +53,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Cucumber Java.Feature: ProductManagement.executor": "Run",
+    "Cucumber Java.Feature: SignUp.executor": "Run",
     "JUnit.AcceptanceTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -56,6 +70,24 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="sweet_mangment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="special.planner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="special.planner" />
+      <option name="MAIN_CLASS_NAME" value="special.planner.AcceptanceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -72,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723534697091</updated>
-      <workItem from="1723534699361" duration="3581000" />
+      <workItem from="1723534699361" duration="11625000" />
     </task>
     <task id="LOCAL-00001" summary="feature for user done with tests">
       <option name="closed" value="true" />
@@ -106,7 +138,23 @@
       <option name="project" value="LOCAL" />
       <updated>1723541477751</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="exploration feature edit">
+      <option name="closed" value="true" />
+      <created>1723541720965</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723541720965</updated>
+    </task>
+    <task id="LOCAL-00006" summary="exploration feature edit">
+      <option name="closed" value="true" />
+      <created>1723541841758</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723541841758</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
