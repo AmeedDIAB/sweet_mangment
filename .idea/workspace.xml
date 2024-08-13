@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="feature for user done with tests(hajjaj)">
-      <change beforePath="$PROJECT_DIR$/src/test/java/special/planner/ExplorationAndPurchaseSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/special/planner/ExplorationAndPurchaseSteps.java" afterDir="false" />
+    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="exploration feature edit">
+      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/AcceptanceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/ContentManagementSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/MonitoringAndReportingSteps.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/UserManagementSteps.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1723534697091</updated>
-      <workItem from="1723534699361" duration="3280000" />
+      <workItem from="1723534699361" duration="3581000" />
     </task>
     <task id="LOCAL-00001" summary="feature for user done with tests">
       <option name="closed" value="true" />
@@ -95,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723535452863</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="exploration feature edit">
+      <option name="closed" value="true" />
+      <created>1723541477751</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723541477751</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +115,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feature for user done with tests" />
     <MESSAGE value="feature for user done with tests(hajjaj)" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature for user done with tests(hajjaj)" />
+    <MESSAGE value="exploration feature edit" />
+    <option name="LAST_COMMIT_MESSAGE" value="exploration feature edit" />
   </component>
 </project>
