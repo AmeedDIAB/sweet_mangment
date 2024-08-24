@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test v2">
+    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test v24">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Account.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/AccountManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/MessagingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/MessagingSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/OrderManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/ProductManagement.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +63,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ameed\IdeaProjects\sweet_mangment" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="sweet_mangment" />
@@ -107,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723534697091</updated>
       <workItem from="1723534699361" duration="16098000" />
-      <workItem from="1724449189968" duration="1623000" />
+      <workItem from="1724449189968" duration="1925000" />
     </task>
     <task id="LOCAL-00001" summary="feature for user done with tests">
       <option name="closed" value="true" />
@@ -189,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723580153396</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="test v24">
+      <option name="closed" value="true" />
+      <created>1724497995016</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1724497995016</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +216,7 @@
     <MESSAGE value="exploration feature edit" />
     <MESSAGE value="main" />
     <MESSAGE value="test v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="test v2" />
+    <MESSAGE value="test v24" />
+    <option name="LAST_COMMIT_MESSAGE" value="test v24" />
   </component>
 </project>
