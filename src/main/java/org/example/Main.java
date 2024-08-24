@@ -152,8 +152,7 @@ class AdminPage {
         logger.info("Enter user ID to update: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            logger.warning(String.format("User not found with ID: %s", userId));
-
+            logger.warning(String.format("User not found with ID: %s" , userId));
             return;
         }
 
@@ -168,8 +167,7 @@ class AdminPage {
         logger.info("Enter user ID to remove: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            logger.warning(String.format("User not found with ID: %s", userId));
-
+            logger.warning(String.format("User not found with ID: %s" , userId));
             return;
         }
         admin.removeUser(userId);
@@ -455,11 +453,11 @@ class Admin {
                 recipes.remove(recipe);
                 Recipe updatedRecipe = new Recipe(id, newTitle, newDescription);
                 recipes.add(updatedRecipe);
-                logger.info(String.format("Recipe updated: &s" , updatedRecipe));
+                logger.info(String.format("Recipe updated: %s" , updatedRecipe));
                 return;
             }
         }
-        logger.warning("Recipe not found with ID: " + id);
+        logger.warning(String.format("Recipe not found with ID: %s" , id));
     }
 
     public void removeRecipe(String id) {
@@ -468,11 +466,11 @@ class Admin {
             Recipe recipe = iterator.next();
             if (recipe.getId().equals(id)) {
                 iterator.remove();
-                logger.info("Recipe removed with ID: " + id);
+                logger.info(String.format("Recipe removed with ID: %s" , id));
                 return;
             }
         }
-        logger.warning("Recipe not found with ID: " + id);
+        logger.warning(String.format("Recipe not found with ID: %s" , id));
     }
 
     public void listRecipes() {
@@ -485,7 +483,7 @@ class Admin {
     // Post Management
     public void addPost(Post post) {
         posts.add(post);
-        logger.info("Post added: " + post);
+        logger.info(String.format("Post added: %s" , post));
     }
 
     public void updatePost(String id, String newTitle, String newContent) {
@@ -495,11 +493,11 @@ class Admin {
                 posts.remove(post);
                 Post updatedPost = new Post(id, newTitle, newContent);
                 posts.add(updatedPost);
-                logger.info("Post updated: " + updatedPost);
+                logger.info(String.format("Post updated: %s" , updatedPost));
                 return;
             }
         }
-        logger.warning("Post not found with ID: " + id);
+        logger.warning(String.format("Post not found with ID: %s" , id));
     }
 
     public void removePost(String id) {
@@ -508,11 +506,11 @@ class Admin {
             Post post = iterator.next();
             if (post.getId().equals(id)) {
                 iterator.remove();
-                logger.info("Post removed with ID: " + id);
+                logger.info(String.format("Post removed with ID: %s" , id));
                 return;
             }
         }
-        logger.warning("Post not found with ID: " + id);
+        logger.warning(String.format("Post not found with ID: %s" , id));
     }
 
     public void listPosts() {
@@ -538,7 +536,7 @@ class Admin {
     // Add a new user
     public void addUser(User user) {
         users.add(user);
-        logger.info("User added: " + user);
+        logger.info(String.format("User added: %s" , user));
     }
 
     // Update user information
@@ -547,9 +545,9 @@ class Admin {
         if (user != null) {
             user.setName(newName);
             user.setEmail(newEmail);
-            logger.info("User updated: " + user);
+            logger.info(String.format("User updated: %s" , user));
         } else {
-            logger.warning("User not found with ID: " + userId);
+            logger.warning(String.format("User not found with ID: %s" , userId));
         }
     }
 
@@ -560,11 +558,11 @@ class Admin {
             User user = iterator.next();
             if (user.getUserId().equals(userId)) {
                 iterator.remove();
-                logger.info("User removed with ID: " + userId);
+                logger.info(String.format("User removed with ID: %s" , userId));
                 return;
             }
         }
-        logger.warning("User not found with ID: " + userId);
+        logger.warning(String.format("User not found with ID: %s" , userId));
     }
 
     // List all users
@@ -594,7 +592,7 @@ class Admin {
         }
         logger.info("User statistics by city:");
         for (Map.Entry<String, Integer> entry : cityStats.entrySet()) {
-            logger.info("City: " + entry.getKey() + ", Number of Users: " + entry.getValue());
+            logger.info(String.format("City: %s" , entry.getKey() , ", Number of Users: %s" , entry.getValue()));
         }
     }
 }
@@ -621,7 +619,7 @@ class Store {
         products.add(product);
         sales.put(product, 0);  // Initialize sales count
         discounts.put(product, 0.0); // Initialize discount
-        logger.info("Product added: " + product);
+        logger.info(String.format("Product added: %s" , product));
     }
 
     // Update a product's price
@@ -630,11 +628,11 @@ class Store {
             if (product.getName().equals(name)) {
                 products.remove(product);
                 products.add(new Product(name, newPrice));
-                logger.info("Product updated: " + product);
+                logger.info(String.format("Product updated: %s" , product));
                 return;
             }
         }
-        logger.warning("Product not found: " + name);
+        logger.warning(String.format("Product not found: %s" , name));
     }
 
     // Remove a product from the store
@@ -859,7 +857,7 @@ class Recipe {
 class Post {
     private String id;
     private String title;
-    private String content;
+    private final String content;
 
     public Post(String id, String title, String content) {
         this.id = id;
@@ -1055,7 +1053,7 @@ class ManagerPage {
                 break;
 
             default:
-                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
@@ -1077,7 +1075,7 @@ class ManagerPage {
                 break;
 
             default:
-                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
@@ -1119,7 +1117,7 @@ class ManagerPage {
                 break;
 
             default:
-                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
