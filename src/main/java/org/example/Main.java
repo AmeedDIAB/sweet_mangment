@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Iterator;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 public class Main {
+
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -21,10 +23,10 @@ public class Main {
         store.addProduct(new Product("Gingerbread", 5.99));
         store.addProduct(new Product("Chocolate Cake", 7.99));
 
-        System.out.println("\n--- Main Page ---");
-        System.out.println("1. Admin");
-        System.out.println("2. Manager(Store Owner / Supplier)");
-        System.out.println("3. User");
+        logger.info("\n--- Main Page ---");
+        logger.info("1. Admin");
+        logger.info("2. Manager(Store Owner / Supplier)");
+        logger.info("3. User");
         int choice = scanner.nextInt();
         switch (choice) {
             case 1:
@@ -48,17 +50,13 @@ public class Main {
                 break;
 
         }
-
-
-
-
-
     }
 }
 
 // Admin Page
 class AdminPage {
 
+    private static final Logger logger = Logger.getLogger(AdminPage.class.getName());
     private Admin admin;
     private Store store;  // Added Store for managing products and sales
 
@@ -71,15 +69,15 @@ class AdminPage {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n--- Admin Page ---");
-            System.out.println("1. Add User");
-            System.out.println("2. Update User");
-            System.out.println("3. Remove User");
-            System.out.println("4. List Users");
-            System.out.println("5. Content Management"); // Added Content Management
-            System.out.println("6. Monitoring and Reporting");
-            System.out.println("7. Exit");
-            System.out.print("Choose an option: ");
+            logger.info("\n--- Admin Page ---");
+            logger.info("1. Add User");
+            logger.info("2. Update User");
+            logger.info("3. Remove User");
+            logger.info("4. List Users");
+            logger.info("5. Content Management"); // Added Content Management
+            logger.info("6. Monitoring and Reporting");
+            logger.info("7. Exit");
+            logger.info("Choose an option: ");
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume newline
 
@@ -109,13 +107,13 @@ class AdminPage {
                     break;
 
                 case 7:
-                    System.out.println("Exiting...");
+                    logger.info("Exiting...");
                     return;
 
                 default:
-                    System.out.println("Invalid option. Please try again.");
+                    logger.warning("Invalid option. Please try again.");
             }
-            System.out.println("1. Returning to Admin Page");
+            logger.info("1. Returning to Admin Page");
             choice = scanner.nextInt();
             if (choice == 1) {
                 continue;
@@ -124,15 +122,15 @@ class AdminPage {
     }
 
     private void addUser(Scanner scanner) {
-        System.out.print("Enter user type (storeOwner/supplier): ");
+        logger.info("Enter user type (storeOwner/supplier): ");
         String type = scanner.nextLine();
-        System.out.print("Enter user ID: ");
+        logger.info("Enter user ID: ");
         String userId = scanner.nextLine();
-        System.out.print("Enter name: ");
+        logger.info("Enter name: ");
         String name = scanner.nextLine();
-        System.out.print("Enter email: ");
+        logger.info("Enter email: ");
         String email = scanner.nextLine();
-        System.out.print("Enter city: ");
+        logger.info("Enter city: ");
         String city = scanner.nextLine();  // Added city
 
         if (type.equalsIgnoreCase("storeOwner")) {
@@ -140,41 +138,41 @@ class AdminPage {
         } else if (type.equalsIgnoreCase("supplier")) {
             admin.addUser(new Supplier(userId, name, email, city));
         } else {
-            System.out.println("Invalid user type.");
+            logger.warning("Invalid user type.");
         }
     }
 
     private void updateUser(Scanner scanner) {
-        System.out.print("Enter user ID to update: ");
+        logger.info("Enter user ID to update: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            System.out.println("User not found with ID: " + userId);
+            logger.warning("User not found with ID: " + userId);
             return;
         }
 
-        System.out.print("Enter new name: ");
+        logger.info("Enter new name: ");
         String name = scanner.nextLine();
-        System.out.print("Enter new email: ");
+        logger.info("Enter new email: ");
         String email = scanner.nextLine();
         admin.updateUser(userId, name, email);
     }
 
     private void removeUser(Scanner scanner) {
-        System.out.print("Enter user ID to remove: ");
+        logger.info("Enter user ID to remove: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            System.out.println("User not found with ID: " + userId);
+            logger.warning("User not found with ID: " + userId);
             return;
         }
         admin.removeUser(userId);
     }
 
     private void showMonitoringAndReporting(Scanner scanner) {
-        System.out.println("\n--- Monitoring and Reporting ---");
-        System.out.println("1. Generate Financial Report");
-        System.out.println("2. Best-Selling Products");
-        System.out.println("3. User Statistics by City");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Monitoring and Reporting ---");
+        logger.info("1. Generate Financial Report");
+        logger.info("2. Best-Selling Products");
+        logger.info("3. User Statistics by City");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -192,16 +190,16 @@ class AdminPage {
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
     private void showContentManagement(Scanner scanner) {
-        System.out.println("\n--- Content Management ---");
-        System.out.println("1. Manage Recipes");
-        System.out.println("2. Manage Posts");
-        System.out.println("3. Manage User Feedback");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Content Management ---");
+        logger.info("1. Manage Recipes");
+        logger.info("2. Manage Posts");
+        logger.info("3. Manage User Feedback");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -219,43 +217,43 @@ class AdminPage {
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
     private void manageRecipes(Scanner scanner) {
-        System.out.println("\n--- Recipe Management ---");
-        System.out.println("1. Add Recipe");
-        System.out.println("2. Update Recipe");
-        System.out.println("3. Remove Recipe");
-        System.out.println("4. List Recipes");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Recipe Management ---");
+        logger.info("1. Add Recipe");
+        logger.info("2. Update Recipe");
+        logger.info("3. Remove Recipe");
+        logger.info("4. List Recipes");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
         switch (choice) {
             case 1:
-                System.out.print("Enter recipe ID: ");
+                logger.info("Enter recipe ID: ");
                 String id = scanner.nextLine();
-                System.out.print("Enter recipe title: ");
+                logger.info("Enter recipe title: ");
                 String title = scanner.nextLine();
-                System.out.print("Enter recipe description: ");
+                logger.info("Enter recipe description: ");
                 String description = scanner.nextLine();
                 admin.addRecipe(new Recipe(id, title, description));
                 break;
 
             case 2:
-                System.out.print("Enter recipe ID to update: ");
+                logger.info("Enter recipe ID to update: ");
                 id = scanner.nextLine();
-                System.out.print("Enter new title: ");
+                logger.info("Enter new title: ");
                 title = scanner.nextLine();
-                System.out.print("Enter new description: ");
+                logger.info("Enter new description: ");
                 description = scanner.nextLine();
                 admin.updateRecipe(id, title, description);
                 break;
 
             case 3:
-                System.out.print("Enter recipe ID to remove: ");
+                logger.info("Enter recipe ID to remove: ");
                 id = scanner.nextLine();
                 admin.removeRecipe(id);
                 break;
@@ -265,43 +263,43 @@ class AdminPage {
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
     private void managePosts(Scanner scanner) {
-        System.out.println("\n--- Post Management ---");
-        System.out.println("1. Add Post");
-        System.out.println("2. Update Post");
-        System.out.println("3. Remove Post");
-        System.out.println("4. List Posts");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Post Management ---");
+        logger.info("1. Add Post");
+        logger.info("2. Update Post");
+        logger.info("3. Remove Post");
+        logger.info("4. List Posts");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
         switch (choice) {
             case 1:
-                System.out.print("Enter post ID: ");
+                logger.info("Enter post ID: ");
                 String id = scanner.nextLine();
-                System.out.print("Enter post title: ");
+                logger.info("Enter post title: ");
                 String title = scanner.nextLine();
-                System.out.print("Enter post content: ");
+                logger.info("Enter post content: ");
                 String content = scanner.nextLine();
                 admin.addPost(new Post(id, title, content));
                 break;
 
             case 2:
-                System.out.print("Enter post ID to update: ");
+                logger.info("Enter post ID to update: ");
                 id = scanner.nextLine();
-                System.out.print("Enter new title: ");
+                logger.info("Enter new title: ");
                 title = scanner.nextLine();
-                System.out.print("Enter new content: ");
+                logger.info("Enter new content: ");
                 content = scanner.nextLine();
                 admin.updatePost(id, title, content);
                 break;
 
             case 3:
-                System.out.print("Enter post ID to remove: ");
+                logger.info("Enter post ID to remove: ");
                 id = scanner.nextLine();
                 admin.removePost(id);
                 break;
@@ -311,23 +309,23 @@ class AdminPage {
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
     private void manageFeedback(Scanner scanner) {
-        System.out.println("\n--- Feedback Management ---");
-        System.out.println("1. Add Feedback");
-        System.out.println("2. List Feedback");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Feedback Management ---");
+        logger.info("1. Add Feedback");
+        logger.info("2. List Feedback");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
         switch (choice) {
             case 1:
-                System.out.print("Enter user ID: ");
+                logger.info("Enter user ID: ");
                 String userId = scanner.nextLine();
-                System.out.print("Enter feedback content: ");
+                logger.info("Enter feedback content: ");
                 String content = scanner.nextLine();
                 admin.addFeedback(new Feedback(userId, content));
                 break;
@@ -337,7 +335,7 @@ class AdminPage {
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 }
@@ -423,22 +421,23 @@ class Supplier extends User {
 
 // Admin Class
 class Admin {
+    private static final Logger logger = Logger.getLogger(Admin.class.getName());
     private List<User> users;
     private List<Recipe> recipes;
     private List<Post> posts;
     private List<Feedback> feedbacks;
 
     public Admin() {
-        this.users = new ArrayList<User>();
-        this.recipes = new ArrayList<Recipe>();
-        this.posts = new ArrayList<Post>();
-        this.feedbacks = new ArrayList<Feedback>();
+        this.users = new ArrayList<>();
+        this.recipes = new ArrayList<>();
+        this.posts = new ArrayList<>();
+        this.feedbacks = new ArrayList<>();
     }
 
     // Recipe Management
     public void addRecipe(Recipe recipe) {
         recipes.add(recipe);
-        System.out.println("Recipe added: " + recipe);
+        logger.info("Recipe added: " + recipe);
     }
 
     public void updateRecipe(String id, String newTitle, String newDescription) {
@@ -446,12 +445,13 @@ class Admin {
             if (recipe.getId().equals(id)) {
                 // Note: Since Recipe is immutable, you might want to remove and re-add it.
                 recipes.remove(recipe);
-                recipes.add(new Recipe(id, newTitle, newDescription));
-                System.out.println("Recipe updated: " + new Recipe(id, newTitle, newDescription));
+                Recipe updatedRecipe = new Recipe(id, newTitle, newDescription);
+                recipes.add(updatedRecipe);
+                logger.info("Recipe updated: " + updatedRecipe);
                 return;
             }
         }
-        System.out.println("Recipe not found with ID: " + id);
+        logger.warning("Recipe not found with ID: " + id);
     }
 
     public void removeRecipe(String id) {
@@ -460,24 +460,24 @@ class Admin {
             Recipe recipe = iterator.next();
             if (recipe.getId().equals(id)) {
                 iterator.remove();
-                System.out.println("Recipe removed with ID: " + id);
+                logger.info("Recipe removed with ID: " + id);
                 return;
             }
         }
-        System.out.println("Recipe not found with ID: " + id);
+        logger.warning("Recipe not found with ID: " + id);
     }
 
     public void listRecipes() {
-        System.out.println("All recipes:");
+        logger.info("All recipes:");
         for (Recipe recipe : recipes) {
-            System.out.println(recipe);
+            logger.info(recipe.toString());
         }
     }
 
     // Post Management
     public void addPost(Post post) {
         posts.add(post);
-        System.out.println("Post added: " + post);
+        logger.info("Post added: " + post);
     }
 
     public void updatePost(String id, String newTitle, String newContent) {
@@ -485,12 +485,13 @@ class Admin {
             if (post.getId().equals(id)) {
                 // Note: Since Post is immutable, you might want to remove and re-add it.
                 posts.remove(post);
-                posts.add(new Post(id, newTitle, newContent));
-                System.out.println("Post updated: " + new Post(id, newTitle, newContent));
+                Post updatedPost = new Post(id, newTitle, newContent);
+                posts.add(updatedPost);
+                logger.info("Post updated: " + updatedPost);
                 return;
             }
         }
-        System.out.println("Post not found with ID: " + id);
+        logger.warning("Post not found with ID: " + id);
     }
 
     public void removePost(String id) {
@@ -499,37 +500,37 @@ class Admin {
             Post post = iterator.next();
             if (post.getId().equals(id)) {
                 iterator.remove();
-                System.out.println("Post removed with ID: " + id);
+                logger.info("Post removed with ID: " + id);
                 return;
             }
         }
-        System.out.println("Post not found with ID: " + id);
+        logger.warning("Post not found with ID: " + id);
     }
 
     public void listPosts() {
-        System.out.println("All posts:");
+        logger.info("All posts:");
         for (Post post : posts) {
-            System.out.println(post);
+            logger.info(post.toString());
         }
     }
 
     // Feedback Management
     public void addFeedback(Feedback feedback) {
         feedbacks.add(feedback);
-        System.out.println("Feedback added: " + feedback);
+        logger.info("Feedback added: " + feedback);
     }
 
     public void listFeedbacks() {
-        System.out.println("All feedbacks:");
+        logger.info("All feedbacks:");
         for (Feedback feedback : feedbacks) {
-            System.out.println(feedback);
+            logger.info(feedback.toString());
         }
     }
 
     // Add a new user
     public void addUser(User user) {
         users.add(user);
-        System.out.println("User added: " + user);
+        logger.info("User added: " + user);
     }
 
     // Update user information
@@ -538,9 +539,9 @@ class Admin {
         if (user != null) {
             user.setName(newName);
             user.setEmail(newEmail);
-            System.out.println("User updated: " + user);
+            logger.info("User updated: " + user);
         } else {
-            System.out.println("User not found with ID: " + userId);
+            logger.warning("User not found with ID: " + userId);
         }
     }
 
@@ -551,18 +552,18 @@ class Admin {
             User user = iterator.next();
             if (user.getUserId().equals(userId)) {
                 iterator.remove();
-                System.out.println("User removed with ID: " + userId);
+                logger.info("User removed with ID: " + userId);
                 return;
             }
         }
-        System.out.println("User not found with ID: " + userId);
+        logger.warning("User not found with ID: " + userId);
     }
 
     // List all users
     public void listUsers() {
-        System.out.println("All users:");
+        logger.info("All users:");
         for (User user : users) {
-            System.out.println(user);
+            logger.info(user.toString());
         }
     }
 
@@ -578,20 +579,21 @@ class Admin {
 
     // Show user statistics by city
     public void showUserStatisticsByCity() {
-        Map<String, Integer> cityStats = new HashMap<String, Integer>();
+        Map<String, Integer> cityStats = new HashMap<>();
         for (User user : users) {
             String city = user.getCity();
             cityStats.put(city, cityStats.getOrDefault(city, 0) + 1);
         }
-        System.out.println("User statistics by city:");
+        logger.info("User statistics by city:");
         for (Map.Entry<String, Integer> entry : cityStats.entrySet()) {
-            System.out.println("City: " + entry.getKey() + ", Number of Users: " + entry.getValue());
+            logger.info("City: " + entry.getKey() + ", Number of Users: " + entry.getValue());
         }
     }
 }
 
 // Store Class
 class Store {
+    private static final Logger logger = Logger.getLogger(Store.class.getName());
     private List<Product> products;
     private Map<Product, Integer> sales;
     private Map<Product, Double> discounts;
@@ -611,6 +613,7 @@ class Store {
         products.add(product);
         sales.put(product, 0);  // Initialize sales count
         discounts.put(product, 0.0); // Initialize discount
+        logger.info("Product added: " + product);
     }
 
     // Update a product's price
@@ -619,11 +622,11 @@ class Store {
             if (product.getName().equals(name)) {
                 products.remove(product);
                 products.add(new Product(name, newPrice));
-                System.out.println("Product updated: " + product);
+                logger.info("Product updated: " + product);
                 return;
             }
         }
-        System.out.println("Product not found: " + name);
+        logger.warning("Product not found: " + name);
     }
 
     // Remove a product from the store
@@ -635,24 +638,24 @@ class Store {
                 iterator.remove();
                 sales.remove(product);
                 discounts.remove(product);
-                System.out.println("Product removed: " + name);
+                logger.info("Product removed: " + name);
                 return;
             }
         }
-        System.out.println("Product not found: " + name);
+        logger.warning("Product not found: " + name);
     }
 
     // List all products
     public void listProducts() {
-        System.out.println("All products:");
+        logger.info("All products:");
         for (Product product : products) {
-            System.out.println(product);
+            logger.info(product.toString());
         }
     }
 
     // Get all products
     public List<Product> getProducts() {
-        return new ArrayList<Product>(products);  // Return a copy to avoid modification of the original list
+        return new ArrayList<>(products);  // Return a copy to avoid modification of the original list
     }
 
     // Apply discount to a product
@@ -660,19 +663,20 @@ class Store {
         for (Product product : products) {
             if (product.getName().equals(name)) {
                 discounts.put(product, discountPercentage);
-                System.out.println("Discount applied: " + discountPercentage + "% to " + name);
+                logger.info("Discount applied: " + discountPercentage + "% to " + name);
                 return;
             }
         }
-        System.out.println("Product not found: " + name);
+        logger.warning("Product not found: " + name);
     }
 
     // Record a sale
     public void recordSale(Product product, int quantity) {
         if (products.contains(product)) {
             sales.put(product, sales.getOrDefault(product, 0) + quantity);
+            logger.info("Sale recorded: " + quantity + " units of " + product.getName());
         } else {
-            System.out.println("Product not found in store.");
+            logger.warning("Product not found in store.");
         }
     }
 
@@ -687,34 +691,36 @@ class Store {
             double finalPrice = price - (price * discount / 100);
             totalSales += finalPrice * quantitySold;
         }
-        System.out.println("Financial Report:");
-        System.out.println("Total Sales: $" + totalSales);
+        logger.info("Financial Report:");
+        logger.info("Total Sales: $" + totalSales);
     }
 
     // Show best-selling products
     public void showBestSellingProducts() {
-        List<Map.Entry<Product, Integer>> salesList = new ArrayList<Map.Entry<Product, Integer>>(sales.entrySet());
+        List<Map.Entry<Product, Integer>> salesList = new ArrayList<>(sales.entrySet());
         salesList.sort((e1, e2) -> Integer.compare(e2.getValue(), e1.getValue()));  // Sort by quantity sold
 
-        System.out.println("Best-Selling Products:");
+        logger.info("Best-Selling Products:");
         for (Map.Entry<Product, Integer> entry : salesList) {
             Product product = entry.getKey();
             int quantitySold = entry.getValue();
-            System.out.println("Product: " + product.getName() + ", Quantity Sold: " + quantitySold);
+            logger.info("Product: " + product.getName() + ", Quantity Sold: " + quantitySold);
         }
     }
+
     // Add a new dessert recipe
     public void addDessertRecipe(DessertRecipe recipe) {
         dessertRecipes.add(recipe);
+        logger.info("Dessert recipe added: " + recipe);
     }
 
     // List all dessert recipes
     public void listDessertRecipes() {
         if (dessertRecipes.isEmpty()) {
-            System.out.println("No dessert recipes available.");
+            logger.info("No dessert recipes available.");
         } else {
             for (DessertRecipe recipe : dessertRecipes) {
-                System.out.println(recipe);
+                logger.info(recipe.toString());
             }
         }
     }
@@ -725,12 +731,12 @@ class Store {
         for (DessertRecipe recipe : dessertRecipes) {
             if (recipe.getName().toLowerCase().contains(keyword.toLowerCase()) ||
                     recipe.getDescription().toLowerCase().contains(keyword.toLowerCase())) {
-                System.out.println(recipe);
+                logger.info(recipe.toString());
                 found = true;
             }
         }
         if (!found) {
-            System.out.println("No recipes found with the keyword: " + keyword);
+            logger.info("No recipes found with the keyword: " + keyword);
         }
     }
 
@@ -739,12 +745,12 @@ class Store {
         boolean found = false;
         for (DessertRecipe recipe : dessertRecipes) {
             if (recipe.getDietaryTags().containsAll(dietaryTags)) {
-                System.out.println(recipe);
+                logger.info(recipe.toString());
                 found = true;
             }
         }
         if (!found) {
-            System.out.println("No recipes match the dietary tags: " + dietaryTags);
+            logger.info("No recipes match the dietary tags: " + dietaryTags);
         }
     }
 
@@ -752,19 +758,19 @@ class Store {
     public void purchaseDessertRecipe(String recipeName, User user) {
         for (DessertRecipe recipe : dessertRecipes) {
             if (recipe.getName().equalsIgnoreCase(recipeName)) {
-                System.out.println("Dessert purchased: " + recipe);
+                logger.info("Dessert purchased: " + recipe);
                 // Implement additional purchase logic here
                 return;
             }
         }
-        System.out.println("Dessert recipe not found: " + recipeName);
+        logger.warning("Dessert recipe not found: " + recipeName);
     }
 
     // Place a new order
     public void placeOrder(Map<Product, Integer> productQuantities) {
         Order newOrder = new Order(productQuantities);
         orders.put(newOrder.getOrderId(), newOrder);
-        System.out.println("Order placed: " + newOrder);
+        logger.info("Order placed: " + newOrder);
     }
 
     // Update the status of an order
@@ -772,20 +778,21 @@ class Store {
         Order order = orders.get(orderId);
         if (order != null) {
             order.setStatus(newStatus);
-            System.out.println("Order status updated: " + order);
+            logger.info("Order status updated: " + order);
         } else {
-            System.out.println("Order not found with ID: " + orderId);
+            logger.warning("Order not found with ID: " + orderId);
         }
     }
 
     // List all orders
     public void listOrders() {
-        System.out.println("All orders:");
+        logger.info("All orders:");
         for (Order order : orders.values()) {
-            System.out.println(order);
+            logger.info(order.toString());
         }
     }
 }
+
 // Product Class
 class Product {
     private String name;
@@ -894,6 +901,7 @@ class Feedback {
 }
 //------------------------------------------------------------------
 class ManagerPage {
+    private static final Logger logger = Logger.getLogger(ManagerPage.class.getName());
     private Store store;
     private MessagingSystem messagingSystem;
     private String businessName; // Business information field
@@ -910,16 +918,16 @@ class ManagerPage {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("\n--- Manager Page ---");
-            System.out.println("1. Product Management");
-            System.out.println("2. Monitor Sales and Profits");
-            System.out.println("3. Identify Best-Selling Products");
-            System.out.println("4. Implement Dynamic Discounts");
-            System.out.println("5. Communication and Notification");
-            System.out.println("6. Account Management"); // New option for Account Management
-            System.out.println("7. Order Management");
-            System.out.println("8. Exit");
-            System.out.print("Choose an option: ");
+            logger.info("\n--- Manager Page ---");
+            logger.info("1. Product Management");
+            logger.info("2. Monitor Sales and Profits");
+            logger.info("3. Identify Best-Selling Products");
+            logger.info("4. Implement Dynamic Discounts");
+            logger.info("5. Communication and Notification");
+            logger.info("6. Account Management"); // New option for Account Management
+            logger.info("7. Order Management");
+            logger.info("8. Exit");
+            logger.info("Choose an option: ");
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume newline
 
@@ -953,44 +961,44 @@ class ManagerPage {
                     return;
 
                 case 8:
-                    System.out.println("Exiting...");
+                    logger.info("Exiting...");
                     return;
 
                 default:
-                    System.out.println("Invalid option. Please try again.");
+                    logger.warning("Invalid option. Please try again.");
             }
         }
     }
 
     private void manageProducts(Scanner scanner) {
-        System.out.println("\n--- Product Management ---");
-        System.out.println("1. Add Product");
-        System.out.println("2. Update Product");
-        System.out.println("3. Remove Product");
-        System.out.println("4. List Products");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Product Management ---");
+        logger.info("1. Add Product");
+        logger.info("2. Update Product");
+        logger.info("3. Remove Product");
+        logger.info("4. List Products");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
         switch (choice) {
             case 1:
-                System.out.print("Enter product name: ");
+                logger.info("Enter product name: ");
                 String name = scanner.nextLine();
-                System.out.print("Enter product price: ");
+                logger.info("Enter product price: ");
                 double price = scanner.nextDouble();
                 store.addProduct(new Product(name, price));
                 break;
 
             case 2:
-                System.out.print("Enter product name to update: ");
+                logger.info("Enter product name to update: ");
                 name = scanner.nextLine();
-                System.out.print("Enter new price: ");
+                logger.info("Enter new price: ");
                 price = scanner.nextDouble();
                 store.updateProduct(name, price);
                 break;
 
             case 3:
-                System.out.print("Enter product name to remove: ");
+                logger.info("Enter product name to remove: ");
                 name = scanner.nextLine();
                 store.removeProduct(name);
                 break;
@@ -1000,54 +1008,54 @@ class ManagerPage {
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
     private void implementDynamicDiscounts(Scanner scanner) {
-        System.out.println("\n--- Implement Dynamic Discounts ---");
-        System.out.print("Enter product name for discount: ");
+        logger.info("\n--- Implement Dynamic Discounts ---");
+        logger.info("Enter product name for discount: ");
         String name = scanner.nextLine();
-        System.out.print("Enter discount percentage: ");
+        logger.info("Enter discount percentage: ");
         double discount = scanner.nextDouble();
         store.applyDiscount(name, discount);
     }
 
     private void handleCommunication(Scanner scanner) {
-        System.out.println("\n--- Communication and Notification ---");
-        System.out.println("1. Send Message to User");
-        System.out.println("2. Send Message to Supplier");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Communication and Notification ---");
+        logger.info("1. Send Message to User");
+        logger.info("2. Send Message to Supplier");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
         switch (choice) {
             case 1:
-                System.out.print("Enter User ID: ");
+                logger.info("Enter User ID: ");
                 String userId = scanner.nextLine();
-                System.out.print("Enter message content: ");
+                logger.info("Enter message content: ");
                 String userMessage = scanner.nextLine();
                 messagingSystem.sendMessageToUser(userId, userMessage);
                 break;
 
             case 2:
-                System.out.print("Enter Supplier ID: ");
+                logger.info("Enter Supplier ID: ");
                 String supplierId = scanner.nextLine();
-                System.out.print("Enter message content: ");
+                logger.info("Enter message content: ");
                 String supplierMessage = scanner.nextLine();
                 messagingSystem.sendMessageToSupplier(supplierId, supplierMessage);
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
     private void manageAccount(Scanner scanner) {
-        System.out.println("\n--- Account Management ---");
-        System.out.println("1. View Business Information");
-        System.out.println("2. Update Business Information");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Account Management ---");
+        logger.info("1. View Business Information");
+        logger.info("2. Update Business Information");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -1061,30 +1069,31 @@ class ManagerPage {
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
     private void viewBusinessInfo() {
-        System.out.println("\n--- Business Information ---");
-        System.out.println("Business Name: " + businessName);
-        System.out.println("Business Address: " + businessAddress);
+        logger.info("\n--- Business Information ---");
+        logger.info("Business Name: " + businessName);
+        logger.info("Business Address: " + businessAddress);
     }
 
     private void updateBusinessInfo(Scanner scanner) {
-        System.out.println("\n--- Update Business Information ---");
-        System.out.print("Enter new business name: ");
+        logger.info("\n--- Update Business Information ---");
+        logger.info("Enter new business name: ");
         businessName = scanner.nextLine();
-        System.out.print("Enter new business address: ");
+        logger.info("Enter new business address: ");
         businessAddress = scanner.nextLine();
-        System.out.println("Business information updated successfully.");
+        logger.info("Business information updated successfully.");
     }
+
     private void manageOrders(Scanner scanner) {
-        System.out.println("\n--- Order Management ---");
-        System.out.println("1. Place Order");
-        System.out.println("2. Update Order Status");
-        System.out.println("3. List Orders");
-        System.out.print("Choose an option: ");
+        logger.info("\n--- Order Management ---");
+        logger.info("1. Place Order");
+        logger.info("2. Update Order Status");
+        logger.info("3. List Orders");
+        logger.info("Choose an option: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -1102,12 +1111,12 @@ class ManagerPage {
                 break;
 
             default:
-                System.out.println("Invalid option. Please try again.");
+                logger.warning("Invalid option. Please try again.");
         }
     }
 
     private void placeOrder(Scanner scanner) {
-        System.out.println("Enter product quantities (format: productName quantity, e.g., Gingerbread 3): ");
+        logger.info("Enter product quantities (format: productName quantity, e.g., Gingerbread 3): ");
         Map<Product, Integer> productQuantities = new HashMap<>();
         while (true) {
             String input = scanner.nextLine();
@@ -1121,7 +1130,7 @@ class ManagerPage {
             if (product != null) {
                 productQuantities.put(product, quantity);
             } else {
-                System.out.println("Product not found: " + productName);
+                logger.warning("Product not found: " + productName);
             }
         }
 
@@ -1129,9 +1138,9 @@ class ManagerPage {
     }
 
     private void updateOrderStatus(Scanner scanner) {
-        System.out.print("Enter order ID to update: ");
+        logger.info("Enter order ID to update: ");
         String orderId = scanner.nextLine();
-        System.out.print("Enter new status: ");
+        logger.info("Enter new status: ");
         String status = scanner.nextLine();
 
         store.updateOrderStatus(orderId, status);
@@ -1148,6 +1157,7 @@ class ManagerPage {
 }
 //Messaging System Class
 class MessagingSystem {
+    private static final Logger logger = Logger.getLogger(MessagingSystem.class.getName());
     private Map<String, List<String>> userMessages;
     private Map<String, List<String>> supplierMessages;
 
@@ -1158,17 +1168,18 @@ class MessagingSystem {
 
     public void sendMessageToUser(String userId, String message) {
         userMessages.computeIfAbsent(userId, k -> new ArrayList<>()).add(message);
-        System.out.println("Message sent to user " + userId + ": " + message);
+        logger.info("Message sent to user " + userId + ": " + message);
     }
 
     public void sendMessageToSupplier(String supplierId, String message) {
         supplierMessages.computeIfAbsent(supplierId, k -> new ArrayList<>()).add(message);
-        System.out.println("Message sent to supplier " + supplierId + ": " + message);
+        logger.info("Message sent to supplier " + supplierId + ": " + message);
     }
 
     // You can add methods to view messages if needed
 }
 
+// Order Class
 class Order {
     private String orderId;
     private Map<Product, Integer> products;
@@ -1201,9 +1212,10 @@ class Order {
         return "Order ID: " + orderId + ", Status: " + status + ", Products: " + products;
     }
 }
-//-----------------------------------------------
-//UserPage Class
+
+// UserPage Class
 class UserPage {
+    private static final Logger logger = Logger.getLogger(UserPage.class.getName());
     private List<User> users;
     private User currentUser;
     private Map<String, List<String>> communications; // Store communication records
@@ -1219,144 +1231,140 @@ class UserPage {
     // Sign up for a new account
     public void signUp() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter user ID: ");
+        logger.info("Enter user ID: ");
         String userId = scanner.nextLine();
-        System.out.println("Enter name: ");
+        logger.info("Enter name: ");
         String name = scanner.nextLine();
-        System.out.println("Enter email: ");
+        logger.info("Enter email: ");
         String email = scanner.nextLine();
-        System.out.println("Enter city: ");
+        logger.info("Enter city: ");
         String city = scanner.nextLine();
 
         if (findUser(userId) != null) {
-            System.out.println("User ID already exists. Please choose a different user ID.");
+            logger.warning("User ID already exists. Please choose a different user ID.");
         } else {
             User newUser = new Customer(userId, name, email, city);
             users.add(newUser);
-            System.out.println("Account created successfully!");
+            logger.info("Account created successfully!");
         }
     }
 
     // Sign in to the platform
     public void signIn() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter user ID: ");
+        logger.info("Enter user ID: ");
         String userId = scanner.nextLine();
-        System.out.println("Enter name: ");
+        logger.info("Enter name: ");
         String name = scanner.nextLine();
 
         User user = findUser(userId);
         if (user != null && user.getName().equals(name)) {
             currentUser = user;
-            System.out.println("Signed in successfully!");
+            logger.info("Signed in successfully!");
         } else {
-            System.out.println("Invalid user ID or name.");
+            logger.warning("Invalid user ID or name.");
         }
     }
 
     // Manage personal account
     public void manageAccount() {
         if (currentUser == null) {
-            System.out.println("You need to sign in first.");
+            logger.warning("You need to sign in first.");
             return;
         }
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1. Change Name");
-        System.out.println("2. Change Email");
-        System.out.println("3. Change City");
-        System.out.println("4. Delete Account");
+        logger.info("1. Change Name");
+        logger.info("2. Change Email");
+        logger.info("3. Change City");
+        logger.info("4. Delete Account");
         int choice = scanner.nextInt();
         scanner.nextLine();  // consume newline
 
         switch (choice) {
             case 1:
-                System.out.println("Enter new name: ");
+                logger.info("Enter new name: ");
                 String newName = scanner.nextLine();
                 currentUser.setName(newName);
-                System.out.println("Name updated successfully!");
+                logger.info("Name updated successfully!");
                 break;
             case 2:
-                System.out.println("Enter new email: ");
+                logger.info("Enter new email: ");
                 String newEmail = scanner.nextLine();
                 currentUser.setEmail(newEmail);
-                System.out.println("Email updated successfully!");
+                logger.info("Email updated successfully!");
                 break;
             case 3:
-                System.out.println("Enter new city: ");
+                logger.info("Enter new city: ");
                 String newCity = scanner.nextLine();
                 currentUser.setCity(newCity);
-                System.out.println("City updated successfully!");
+                logger.info("City updated successfully!");
                 break;
             case 4:
                 users.remove(currentUser);
                 currentUser = null;
-                System.out.println("Account deleted successfully.");
+                logger.info("Account deleted successfully.");
                 break;
             default:
-                System.out.println("Invalid choice.");
+                logger.warning("Invalid choice.");
         }
     }
 
     // Post and share personal dessert creations
     public void postDessertCreation() {
         if (currentUser == null) {
-            System.out.println("You need to sign in first.");
+            logger.warning("You need to sign in first.");
             return;
         }
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the title of your dessert creation: ");
+        logger.info("Enter the title of your dessert creation: ");
         String title = scanner.nextLine();
-        System.out.println("Enter the description of your dessert creation: ");
+        logger.info("Enter the description of your dessert creation: ");
         String description = scanner.nextLine();
 
         if (currentUser instanceof Customer) {
             ((Customer) currentUser).addDessertCreation(title, description);
-            System.out.println("Dessert creation posted successfully!");
+            logger.info("Dessert creation posted successfully!");
         } else {
-            System.out.println("This feature is not available for your role.");
+            logger.warning("This feature is not available for your role.");
         }
     }
 
     // Communicate with store owners and suppliers
     public void sendMessage() {
         if (currentUser == null) {
-            System.out.println("You need to sign in first.");
+            logger.warning("You need to sign in first.");
             return;
         }
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the recipient's ID (store owner/supplier): ");
+        logger.info("Enter the recipient's ID (store owner/supplier): ");
         String recipientId = scanner.nextLine();
-        System.out.println("Enter your message: ");
+        logger.info("Enter your message: ");
         String message = scanner.nextLine();
 
-        if (!communications.containsKey(recipientId)) {
-            communications.put(recipientId, new ArrayList<>());
-        }
-        communications.get(recipientId).add("From " + currentUser.getUserId() + ": " + message);
-        System.out.println("Message sent successfully!");
+        communications.computeIfAbsent(recipientId, k -> new ArrayList<>())
+                .add("From " + currentUser.getUserId() + ": " + message);
+        logger.info("Message sent successfully!");
     }
 
     // Provide feedback on purchased products and shared recipes
     public void provideFeedback() {
         if (currentUser == null) {
-            System.out.println("You need to sign in first.");
+            logger.warning("You need to sign in first.");
             return;
         }
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the recipient's ID (store owner/supplier or shared recipe ID): ");
+        logger.info("Enter the recipient's ID (store owner/supplier or shared recipe ID): ");
         String recipientId = scanner.nextLine();
-        System.out.println("Enter your feedback: ");
+        logger.info("Enter your feedback: ");
         String feedback = scanner.nextLine();
 
-        if (!feedbacks.containsKey(recipientId)) {
-            feedbacks.put(recipientId, new ArrayList<>());
-        }
-        feedbacks.get(recipientId).add("Feedback from " + currentUser.getUserId() + ": " + feedback);
-        System.out.println("Feedback submitted successfully!");
+        feedbacks.computeIfAbsent(recipientId, k -> new ArrayList<>())
+                .add("Feedback from " + currentUser.getUserId() + ": " + feedback);
+        logger.info("Feedback submitted successfully!");
     }
 
     private User findUser(String userId) {
@@ -1381,8 +1389,9 @@ class UserPage {
     }
 }
 
-//Customer Class
+// Customer Class
 class Customer extends User {
+    private static final Logger logger = Logger.getLogger(Customer.class.getName());
     private List<DessertCreation> dessertCreations;
 
     public Customer(String userId, String name, String email, String city) {
@@ -1399,14 +1408,14 @@ class Customer extends User {
     public void addDessertCreation(String title, String description) {
         DessertCreation creation = new DessertCreation(title, description);
         dessertCreations.add(creation);
-        System.out.println("Dessert creation added: " + creation);
+        logger.info("Dessert creation added: " + creation);
     }
 
     // Method to list all dessert creations by this user
     public void listDessertCreations() {
-        System.out.println("Dessert Creations by " + getName() + ":");
+        logger.info("Dessert Creations by " + getName() + ":");
         for (DessertCreation creation : dessertCreations) {
-            System.out.println(creation);
+            logger.info(creation.toString());
         }
     }
 
@@ -1424,8 +1433,9 @@ class Customer extends User {
     }
 }
 
-//UserAccountService Class
+// UserAccountService Class
 class UserAccountService {
+    private static final Logger logger = Logger.getLogger(UserAccountService.class.getName());
     private Map<String, Customer> users = new HashMap<>();
 
     public void signUp(String userId, String name, String email, String city, String password) {
@@ -1433,9 +1443,9 @@ class UserAccountService {
             Customer user = new Customer(userId, name, email, city);
             // Here you would store the password securely, omitted for brevity
             users.put(email, user);
-            System.out.println("User signed up successfully.");
+            logger.info("User signed up successfully.");
         } else {
-            System.out.println("User with this email already exists.");
+            logger.warning("User with this email already exists.");
         }
     }
 
@@ -1443,10 +1453,10 @@ class UserAccountService {
         // Password validation logic would be here, omitted for simplicity
         Customer user = users.get(email);
         if (user != null) {
-            System.out.println("User signed in successfully.");
+            logger.info("User signed in successfully.");
             return user;
         } else {
-            System.out.println("Invalid email or password.");
+            logger.warning("Invalid email or password.");
             return null;
         }
     }
@@ -1456,9 +1466,9 @@ class UserAccountService {
         if (user != null) {
             user.setName(newName);
             user.setCity(newCity);
-            System.out.println("Account updated successfully.");
+            logger.info("Account updated successfully.");
         } else {
-            System.out.println("User not found.");
+            logger.warning("User not found.");
         }
     }
 }
