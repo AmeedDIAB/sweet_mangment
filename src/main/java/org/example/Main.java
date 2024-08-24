@@ -77,7 +77,7 @@ class AdminPage {
             logger.info("5. Content Management"); // Added Content Management
             logger.info("6. Monitoring and Reporting");
             logger.info("7. Exit");
-            logger.info("Choose an option: ");
+            logger.info("Choose an option for admin: ");
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume newline
 
@@ -172,7 +172,7 @@ class AdminPage {
         logger.info("1. Generate Financial Report");
         logger.info("2. Best-Selling Products");
         logger.info("3. User Statistics by City");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for monitoring and reporting: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -199,7 +199,7 @@ class AdminPage {
         logger.info("1. Manage Recipes");
         logger.info("2. Manage Posts");
         logger.info("3. Manage User Feedback");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for conetent management: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -227,7 +227,7 @@ class AdminPage {
         logger.info("2. Update Recipe");
         logger.info("3. Remove Recipe");
         logger.info("4. List Recipes");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for manage recipes: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -273,7 +273,7 @@ class AdminPage {
         logger.info("2. Update Post");
         logger.info("3. Remove Post");
         logger.info("4. List Posts");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for manage posts: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -317,7 +317,7 @@ class AdminPage {
         logger.info("\n--- Feedback Management ---");
         logger.info("1. Add Feedback");
         logger.info("2. List Feedback");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for manage Feedback: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -927,7 +927,7 @@ class ManagerPage {
             logger.info("6. Account Management"); // New option for Account Management
             logger.info("7. Order Management");
             logger.info("8. Exit");
-            logger.info("Choose an option: ");
+            logger.info("Choose an option for show Manager Page: ");
             int choice = scanner.nextInt();
             scanner.nextLine();  // Consume newline
 
@@ -976,7 +976,7 @@ class ManagerPage {
         logger.info("2. Update Product");
         logger.info("3. Remove Product");
         logger.info("4. List Products");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for manage Products: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -1025,7 +1025,7 @@ class ManagerPage {
         logger.info("\n--- Communication and Notification ---");
         logger.info("1. Send Message to User");
         logger.info("2. Send Message to Supplier");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for handle Communication: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -1055,7 +1055,7 @@ class ManagerPage {
         logger.info("\n--- Account Management ---");
         logger.info("1. View Business Information");
         logger.info("2. Update Business Information");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for manage Account: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
@@ -1093,7 +1093,7 @@ class ManagerPage {
         logger.info("1. Place Order");
         logger.info("2. Update Order Status");
         logger.info("3. List Orders");
-        logger.info("Choose an option: ");
+        logger.info("Choose an option for manage Orders: ");
         int choice = scanner.nextInt();
         scanner.nextLine();  // Consume newline
 
