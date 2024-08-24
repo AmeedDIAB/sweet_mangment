@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test v24 4">
+    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.5">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +65,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ameed\IdeaProjects\sweet_mangment" />
     </key>
@@ -103,7 +107,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723534697091</updated>
       <workItem from="1723534699361" duration="16098000" />
-      <workItem from="1724449189968" duration="6842000" />
+      <workItem from="1724449189968" duration="7758000" />
     </task>
     <task id="LOCAL-00001" summary="feature for user done with tests">
       <option name="closed" value="true" />
@@ -217,7 +221,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724512758950</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="test 24 4.5">
+      <option name="closed" value="true" />
+      <created>1724516188165</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1724516188165</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +256,7 @@
     <MESSAGE value="test v24 2" />
     <MESSAGE value="test v24 3" />
     <MESSAGE value="test v24 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="test v24 4" />
+    <MESSAGE value="test 24 4.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.5" />
   </component>
 </project>

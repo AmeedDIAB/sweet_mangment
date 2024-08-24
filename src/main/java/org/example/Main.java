@@ -10,6 +10,12 @@ import java.util.UUID;
 import java.util.logging.Logger;
 
 public class Main {
+    public class YourClassName {
+        // Define the constant
+        public static final String INVALID_OPTION_MESSAGE = "Invalid option. Please try again";
+
+        // Other class members and methods
+    }
 
     private static final Logger logger = Logger.getLogger(Main.class.getName());
 
@@ -111,7 +117,7 @@ class AdminPage {
                     return;
 
                 default:
-                    logger.warning("Invalid option. Please try again.");
+                    logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
             }
             logger.info("1. Returning to Admin Page");
             choice = scanner.nextInt();
@@ -190,7 +196,7 @@ class AdminPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning("Invaid option. Please try again.");
         }
     }
 
@@ -217,7 +223,7 @@ class AdminPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
         }
     }
 
@@ -263,7 +269,7 @@ class AdminPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
         }
     }
 
@@ -309,7 +315,7 @@ class AdminPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
         }
     }
 
@@ -335,7 +341,7 @@ class AdminPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
         }
     }
 }
@@ -965,7 +971,7 @@ class ManagerPage {
                     return;
 
                 default:
-                    logger.warning("Invalid option. Please try again.");
+                    logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
             }
         }
     }
@@ -1008,7 +1014,7 @@ class ManagerPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
         }
     }
 
@@ -1047,7 +1053,7 @@ class ManagerPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
         }
     }
 
@@ -1069,7 +1075,7 @@ class ManagerPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
         }
     }
 
@@ -1111,7 +1117,7 @@ class ManagerPage {
                 break;
 
             default:
-                logger.warning("Invalid option. Please try again.");
+                logger.warning(Main.YourClassName.INVALID_OPTION_MESSAGE);
         }
     }
 
