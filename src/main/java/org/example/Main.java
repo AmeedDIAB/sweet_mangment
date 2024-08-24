@@ -152,7 +152,8 @@ class AdminPage {
         logger.info("Enter user ID to update: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            logger.warning("User not found with ID: " + userId);
+            logger.warning(String.format("User not found with ID: %s", userId));
+
             return;
         }
 
@@ -167,7 +168,8 @@ class AdminPage {
         logger.info("Enter user ID to remove: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            logger.warning("User not found with ID: " + userId);
+            logger.warning(String.format("User not found with ID: %s", userId));
+
             return;
         }
         admin.removeUser(userId);
@@ -443,7 +445,7 @@ class Admin {
     // Recipe Management
     public void addRecipe(Recipe recipe) {
         recipes.add(recipe);
-        logger.info("Recipe added: " + recipe);
+        logger.info(String.format("Recipe added: %s" , recipe));
     }
 
     public void updateRecipe(String id, String newTitle, String newDescription) {
@@ -453,7 +455,7 @@ class Admin {
                 recipes.remove(recipe);
                 Recipe updatedRecipe = new Recipe(id, newTitle, newDescription);
                 recipes.add(updatedRecipe);
-                logger.info("Recipe updated: " + updatedRecipe);
+                logger.info(String.format("Recipe updated: &s" , updatedRecipe));
                 return;
             }
         }
