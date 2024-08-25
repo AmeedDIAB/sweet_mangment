@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.53">
-      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/AccountManagementTest.java" afterDir="false" />
+    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.55">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyFeatures/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyFeatures/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/AccountManagementSteps.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/special/planner/AccountManagementSteps.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/special/planner/CommunicationAndFeedbackSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/special/planner/CommunicationAndFeedbackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,7 +340,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724593074714</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="test 24 4.55">
+      <option name="closed" value="true" />
+      <created>1724596697610</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724596697610</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +380,8 @@
     <MESSAGE value="test 24 4.52" />
     <MESSAGE value="test 24 4.53" />
     <MESSAGE value="test 24 4.54" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.54" />
+    <MESSAGE value="test 24 4.55" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.55" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sweet_mangment$special_planner_in_sweet_mangment.ic" NAME="special.planner in sweet_mangment Coverage Results" MODIFIED="1724596173833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
@@ -386,6 +390,6 @@
     <SUITE FILE_PATH="coverage/sweet_mangment$AcceptanceTest.ic" NAME="AcceptanceTest Coverage Results" MODIFIED="1724594484103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
       <FILTER>special.planner.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/sweet_mangment$All_in_sweet_mangment.ic" NAME="All in sweet_mangment Coverage Results" MODIFIED="1724596422118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sweet_mangment$All_in_sweet_mangment.ic" NAME="All in sweet_mangment Coverage Results" MODIFIED="1724597531326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
