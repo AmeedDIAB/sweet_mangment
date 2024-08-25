@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.52">
+    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.53">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/MessagingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/MessagingSystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Product.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +52,11 @@
     "Cucumber Java.Feature: ProductManagement.executor": "Run",
     "Cucumber Java.Feature: SignUp.executor": "Run",
     "JUnit.AcceptanceTest.executor": "Run",
+    "JUnit.All in sweet_mangment.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ameed/IdeaProjects/sweet_mangment",
+    "last_opened_file_path": "C:/tst java/EventPlanner-master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,7 +76,7 @@
       <recent name="C:\Users\Ameed\IdeaProjects\sweet_mangment" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in sweet_mangment">
     <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="sweet_mangment" />
       <extension name="coverage">
@@ -89,6 +93,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in sweet_mangment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sweet_mangment" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in sweet_mangment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -107,7 +124,7 @@
       <option name="presentableId" value="Default" />
       <updated>1723534697091</updated>
       <workItem from="1723534699361" duration="16098000" />
-      <workItem from="1724449189968" duration="10158000" />
+      <workItem from="1724449189968" duration="13524000" />
     </task>
     <task id="LOCAL-00001" summary="feature for user done with tests">
       <option name="closed" value="true" />
@@ -245,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724517566607</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="test 24 4.53">
+      <option name="closed" value="true" />
+      <created>1724519351737</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1724519351737</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,6 +300,10 @@
     <MESSAGE value="test 24 4.5" />
     <MESSAGE value="test 24 4.51" />
     <MESSAGE value="test 24 4.52" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.52" />
+    <MESSAGE value="test 24 4.53" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.53" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sweet_mangment$All_in_sweet_mangment.ic" NAME="All in sweet_mangment Coverage Results" MODIFIED="1724587314295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
