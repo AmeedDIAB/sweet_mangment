@@ -13,7 +13,7 @@ public class Main {
     public class YourClassName {
         // Define the constant
         public static final String INVALID_OPTION_MESSAGE = "Invalid option. Please try again";
-
+        final String USER_NOT_FOUND_MESSAGE = "User not found with ID: ";
         // Private constructor to prevent instantiation
         private YourClassName() {
             // Optional: throw an exception if this constructor is accidentally called
@@ -162,7 +162,7 @@ class AdminPage {
         logger.info("Enter user ID to update: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            logger.warning(String.format("User not found with ID: %s" , userId));
+            logger.warning(String.format(USER_NOT_FOUND_MESSAGE);
             return;
         }
 
@@ -177,7 +177,7 @@ class AdminPage {
         logger.info("Enter user ID to remove: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            logger.warning(String.format("User not found with ID: %s" , userId));
+            logger.warning(String.format(USER_NOT_FOUND_MESSAGE);
             return;
         }
         admin.removeUser(userId);
@@ -557,7 +557,7 @@ class Admin {
             user.setEmail(newEmail);
             logger.info(String.format("User updated: %s" , user));
         } else {
-            logger.warning(String.format("User not found with ID: %s" , userId));
+            logger.warning(String.format(USER_NOT_FOUND_MESSAGE);
         }
     }
 
@@ -572,7 +572,7 @@ class Admin {
                 return;
             }
         }
-        logger.warning(String.format("User not found with ID: %s" , userId));
+        logger.warning(String.format(USER_NOT_FOUND_MESSAGE);
     }
 
     // List all users
