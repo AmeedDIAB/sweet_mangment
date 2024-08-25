@@ -23,6 +23,8 @@ public class Main {
         // Other class members and methods
     }
      final String ENTER_USER_ID_MESSAGE = "Enter user ID: ";
+     final String ENTER_NAME_MESSAGE = "Enter name: ";
+
 
 
     private static final Logger logger = Logger.getLogger(Main.class.getName());
@@ -140,7 +142,7 @@ class AdminPage {
         String type = scanner.nextLine();
         logger.info( ENTER_USER_ID_MESSAGE);
         String userId = scanner.nextLine();
-        logger.info("Enter name: ");
+        logger.info(ENTER_NAME_MESSAGE);
         String name = scanner.nextLine();
         logger.info("Enter email: ");
         String email = scanner.nextLine();
@@ -1247,7 +1249,7 @@ class UserPage {
         Scanner scanner = new Scanner(System.in);
         logger.info( ENTER_USER_ID_MESSAGE);
         String userId = scanner.nextLine();
-        logger.info("Enter name: ");
+        logger.info(ENTER_NAME_MESSAGE);
         String name = scanner.nextLine();
         logger.info("Enter email: ");
         String email = scanner.nextLine();
@@ -1268,7 +1270,7 @@ class UserPage {
         Scanner scanner = new Scanner(System.in);
         logger.info( ENTER_USER_ID_MESSAGE);
         String userId = scanner.nextLine();
-        logger.info("Enter name: ");
+        logger.info(ENTER_NAME_MESSAGE);
         String name = scanner.nextLine();
 
         User user = findUser(userId);
