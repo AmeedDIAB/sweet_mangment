@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.53">
+      <change afterPath="$PROJECT_DIR$/src/test/java/special/planner/AccountManagementTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyFeatures/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MyFeatures/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/sweet_mangment/special/planner/AccountManagementSteps.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/special/planner/AccountManagementSteps.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,12 +34,12 @@
     &quot;assignee&quot;: &quot;Mohammad-hajjaj&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AmeedDIAB/sweet_mangment.git",
-    "accountId": "d30d7590-f369-4283-b4d6-bc8caea82fa8"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AmeedDIAB/sweet_mangment.git&quot;,
+    &quot;accountId&quot;: &quot;d30d7590-f369-4283-b4d6-bc8caea82fa8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -48,8 +53,9 @@
   "keyToString": {
     "Cucumber Java.Feature: ProductManagement.executor": "Run",
     "Cucumber Java.Feature: SignUp.executor": "Run",
-    "JUnit.AcceptanceTest.executor": "Run",
-    "JUnit.All in sweet_mangment.executor": "Run",
+    "JUnit.AcceptanceTest.executor": "Coverage",
+    "JUnit.All in sweet_mangment.executor": "Coverage",
+    "JUnit.special.planner in sweet_mangment.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -73,7 +79,7 @@
       <recent name="C:\Users\Ameed\IdeaProjects\sweet_mangment" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AcceptanceTest">
+  <component name="RunManager" selected="JUnit.All in sweet_mangment">
     <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="sweet_mangment" />
       <extension name="coverage">
@@ -98,9 +104,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="special.planner in sweet_mangment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sweet_mangment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="special.planner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="special.planner" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in sweet_mangment" />
+        <item itemvalue="JUnit.special.planner in sweet_mangment" />
       </list>
     </recent_temporary>
   </component>
@@ -355,9 +376,16 @@
     <MESSAGE value="test 24 4.51" />
     <MESSAGE value="test 24 4.52" />
     <MESSAGE value="test 24 4.53" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.53" />
+    <MESSAGE value="test 24 4.54" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.54" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sweet_mangment$All_in_sweet_mangment.ic" NAME="All in sweet_mangment Coverage Results" MODIFIED="1724592371738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sweet_mangment$special_planner_in_sweet_mangment.ic" NAME="special.planner in sweet_mangment Coverage Results" MODIFIED="1724596173833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>special.planner.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sweet_mangment$AcceptanceTest.ic" NAME="AcceptanceTest Coverage Results" MODIFIED="1724594484103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>special.planner.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sweet_mangment$All_in_sweet_mangment.ic" NAME="All in sweet_mangment Coverage Results" MODIFIED="1724596422118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
