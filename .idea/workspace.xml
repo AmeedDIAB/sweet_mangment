@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.53">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/MessagingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/MessagingSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +32,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/AmeedDIAB/sweet_mangment.git",
-    "accountId": "3dbff883-db6a-4d06-a8c3-f494050c225e"
+    "accountId": "d30d7590-f369-4283-b4d6-bc8caea82fa8"
   }
 }]]></component>
   <component name="ProjectColorInfo">{
@@ -52,11 +49,11 @@
     "Cucumber Java.Feature: ProductManagement.executor": "Run",
     "Cucumber Java.Feature: SignUp.executor": "Run",
     "JUnit.AcceptanceTest.executor": "Run",
-    "JUnit.All in sweet_mangment.executor": "Coverage",
+    "JUnit.All in sweet_mangment.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/tst java/EventPlanner-master",
+    "last_opened_file_path": "C:/Users/Jihad/Desktop/alaaprojevt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,7 +73,7 @@
       <recent name="C:\Users\Ameed\IdeaProjects\sweet_mangment" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in sweet_mangment">
+  <component name="RunManager" selected="JUnit.AcceptanceTest">
     <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="sweet_mangment" />
       <extension name="coverage">
@@ -125,6 +122,7 @@
       <updated>1723534697091</updated>
       <workItem from="1723534699361" duration="16098000" />
       <workItem from="1724449189968" duration="13524000" />
+      <workItem from="1724589572235" duration="1850000" />
     </task>
     <task id="LOCAL-00001" summary="feature for user done with tests">
       <option name="closed" value="true" />
