@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.53">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/MessagingSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/MessagingSystem.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sweet_mangment/org/example/Product.class" afterDir="false" />
-    </list>
+    <list default="true" id="754d2d79-1cf4-47af-9f17-a40aaf6e4487" name="Changes" comment="test 24 4.56" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,20 +21,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
+    &quot;lastFilter&quot;: {
     &quot;state&quot;: &quot;OPEN&quot;,
     &quot;assignee&quot;: &quot;Mohammad-hajjaj&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AmeedDIAB/sweet_mangment.git",
-    "accountId": "3dbff883-db6a-4d06-a8c3-f494050c225e"
-  }
-}]]></component>
+    }
+    }</component>
+  <component name="GithubPullRequestsUISettings">{
+    &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AmeedDIAB/sweet_mangment.git&quot;,
+    &quot;accountId&quot;: &quot;d30d7590-f369-4283-b4d6-bc8caea82fa8&quot;
+    }
+    }</component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 0
-}</component>
+    &quot;associatedIndex&quot;: 0
+    }</component>
   <component name="ProjectId" id="2kavqkFx2U3gNQVLAnQFX1F0OCe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,10 +47,11 @@
     "Cucumber Java.Feature: SignUp.executor": "Run",
     "JUnit.AcceptanceTest.executor": "Run",
     "JUnit.All in sweet_mangment.executor": "Coverage",
+    "JUnit.special.planner in sweet_mangment.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/tst java/EventPlanner-master",
+    "last_opened_file_path": "C:/Users/Jihad/Desktop/alaaprojevt",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -76,7 +71,7 @@
       <recent name="C:\Users\Ameed\IdeaProjects\sweet_mangment" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in sweet_mangment">
+  <component name="RunManager" selected="JUnit.AcceptanceTest">
     <configuration name="AcceptanceTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="sweet_mangment" />
       <extension name="coverage">
@@ -101,9 +96,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="special.planner in sweet_mangment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sweet_mangment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="special.planner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="special.planner" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in sweet_mangment" />
+        <item itemvalue="JUnit.special.planner in sweet_mangment" />
       </list>
     </recent_temporary>
   </component>
@@ -125,6 +135,8 @@
       <updated>1723534697091</updated>
       <workItem from="1723534699361" duration="16098000" />
       <workItem from="1724449189968" duration="13524000" />
+      <workItem from="1724589572235" duration="3837000" />
+      <workItem from="1724606685102" duration="62000" />
     </task>
     <task id="LOCAL-00001" summary="feature for user done with tests">
       <option name="closed" value="true" />
@@ -270,7 +282,79 @@
       <option name="project" value="LOCAL" />
       <updated>1724519351737</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="test 24 4.53">
+      <option name="closed" value="true" />
+      <created>1724591438377</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724591438377</updated>
+    </task>
+    <task id="LOCAL-00020" summary="test 24 4.53">
+      <option name="closed" value="true" />
+      <created>1724591681559</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724591681559</updated>
+    </task>
+    <task id="LOCAL-00021" summary="test 24 4.53">
+      <option name="closed" value="true" />
+      <created>1724592001763</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724592001764</updated>
+    </task>
+    <task id="LOCAL-00022" summary="test 24 4.53">
+      <option name="closed" value="true" />
+      <created>1724592043221</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724592043221</updated>
+    </task>
+    <task id="LOCAL-00023" summary="test 24 4.53">
+      <option name="closed" value="true" />
+      <created>1724592654418</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724592654418</updated>
+    </task>
+    <task id="LOCAL-00024" summary="test 24 4.53">
+      <option name="closed" value="true" />
+      <created>1724592887499</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724592887499</updated>
+    </task>
+    <task id="LOCAL-00025" summary="test 24 4.53">
+      <option name="closed" value="true" />
+      <created>1724593074714</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724593074714</updated>
+    </task>
+    <task id="LOCAL-00026" summary="test 24 4.55">
+      <option name="closed" value="true" />
+      <created>1724596697610</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724596697610</updated>
+    </task>
+    <task id="LOCAL-00027" summary="test 24 4.56">
+      <option name="closed" value="true" />
+      <created>1724597982422</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724597982422</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,9 +385,18 @@
     <MESSAGE value="test 24 4.51" />
     <MESSAGE value="test 24 4.52" />
     <MESSAGE value="test 24 4.53" />
-    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.53" />
+    <MESSAGE value="test 24 4.54" />
+    <MESSAGE value="test 24 4.55" />
+    <MESSAGE value="test 24 4.56" />
+    <option name="LAST_COMMIT_MESSAGE" value="test 24 4.56" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/sweet_mangment$All_in_sweet_mangment.ic" NAME="All in sweet_mangment Coverage Results" MODIFIED="1724587314295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+    <SUITE FILE_PATH="coverage/sweet_mangment$special_planner_in_sweet_mangment.ic" NAME="special.planner in sweet_mangment Coverage Results" MODIFIED="1724596173833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>special.planner.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sweet_mangment$AcceptanceTest.ic" NAME="AcceptanceTest Coverage Results" MODIFIED="1724597856672" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>special.planner.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sweet_mangment$All_in_sweet_mangment.ic" NAME="All in sweet_mangment Coverage Results" MODIFIED="1724601290660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
   </component>
 </project>
