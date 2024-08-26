@@ -13,9 +13,19 @@ public class Main {
     public class YourClassName {
         // Define the constant
         public static final String INVALID_OPTION_MESSAGE = "Invalid option. Please try again";
+        final String USER_NOT_FOUND_MESSAGE = "User not found with ID: ";
+        // Private constructor to prevent instantiation
+        private YourClassName() {
+            // Optional: throw an exception if this constructor is accidentally called
+            throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
+        }
 
         // Other class members and methods
     }
+     final String ENTER_USER_ID_MESSAGE = "Enter user ID: ";
+     final String ENTER_NAME_MESSAGE = "Enter name: ";
+
+
 
     private static final Logger logger = Logger.getLogger(Main.class.getName());
 
@@ -130,9 +140,9 @@ class AdminPage {
     private void addUser(Scanner scanner) {
         logger.info("Enter user type (storeOwner/supplier): ");
         String type = scanner.nextLine();
-        logger.info("Enter user ID: ");
+        logger.info( ENTER_USER_ID_MESSAGE);
         String userId = scanner.nextLine();
-        logger.info("Enter name: ");
+        logger.info(ENTER_NAME_MESSAGE);
         String name = scanner.nextLine();
         logger.info("Enter email: ");
         String email = scanner.nextLine();
@@ -152,7 +162,7 @@ class AdminPage {
         logger.info("Enter user ID to update: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            logger.warning(String.format("User not found with ID: %s" , userId));
+            logger.warning(String.format(USER_NOT_FOUND_MESSAGE);
             return;
         }
 
@@ -167,7 +177,7 @@ class AdminPage {
         logger.info("Enter user ID to remove: ");
         String userId = scanner.nextLine();
         if (admin.getUserById(userId) == null) {
-            logger.warning(String.format("User not found with ID: %s" , userId));
+            logger.warning(String.format(USER_NOT_FOUND_MESSAGE);
             return;
         }
         admin.removeUser(userId);
@@ -329,7 +339,7 @@ class AdminPage {
 
         switch (choice) {
             case 1:
-                logger.info("Enter user ID: ");
+                logger.info( ENTER_USER_ID_MESSAGE);
                 String userId = scanner.nextLine();
                 logger.info("Enter feedback content: ");
                 String content = scanner.nextLine();
@@ -547,7 +557,7 @@ class Admin {
             user.setEmail(newEmail);
             logger.info(String.format("User updated: %s" , user));
         } else {
-            logger.warning(String.format("User not found with ID: %s" , userId));
+            logger.warning(String.format(USER_NOT_FOUND_MESSAGE);
         }
     }
 
@@ -562,7 +572,7 @@ class Admin {
                 return;
             }
         }
-        logger.warning(String.format("User not found with ID: %s" , userId));
+        logger.warning(String.format(USER_NOT_FOUND_MESSAGE);
     }
 
     // List all users
@@ -1037,7 +1047,7 @@ class ManagerPage {
 
         switch (choice) {
             case 1:
-                logger.info("Enter User ID: ");
+                logger.info( ENTER_USER_ID_MESSAGE);
                 String userId = scanner.nextLine();
                 logger.info("Enter message content: ");
                 String userMessage = scanner.nextLine();
@@ -1237,9 +1247,9 @@ class UserPage {
     // Sign up for a new account
     public void signUp() {
         Scanner scanner = new Scanner(System.in);
-        logger.info("Enter user ID: ");
+        logger.info( ENTER_USER_ID_MESSAGE);
         String userId = scanner.nextLine();
-        logger.info("Enter name: ");
+        logger.info(ENTER_NAME_MESSAGE);
         String name = scanner.nextLine();
         logger.info("Enter email: ");
         String email = scanner.nextLine();
@@ -1258,9 +1268,9 @@ class UserPage {
     // Sign in to the platform
     public void signIn() {
         Scanner scanner = new Scanner(System.in);
-        logger.info("Enter user ID: ");
+        logger.info( ENTER_USER_ID_MESSAGE);
         String userId = scanner.nextLine();
-        logger.info("Enter name: ");
+        logger.info(ENTER_NAME_MESSAGE);
         String name = scanner.nextLine();
 
         User user = findUser(userId);
